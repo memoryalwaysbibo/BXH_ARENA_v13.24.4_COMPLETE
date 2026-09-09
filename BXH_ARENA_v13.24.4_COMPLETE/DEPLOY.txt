@@ -1,0 +1,9 @@
+BXH ARENA v13.24.4
+
+1. GitHub Pages：以 index.html 覆蓋目前部署檔。
+2. Firestore Rules：本版無變更，沿用已發布的 v13.24.2。
+3. 主要修復：
+   - COMMUNITY 一般賽事正常同步不再寫 assignedStaffUids，避免 owner Rules 拒絕。
+   - 雲端寫入失敗會顯示 LINK ERROR，不再只因監聽在線就顯示同步正常。
+   - 確認結果前必須等前序雲端狀態寫入成功，避免雲端對戰表落後而誤報找不到本場比賽。
+   - 建立／發布賽事後失效賽事大廳快取，重新進入會讀取最新 publicTournaments。
